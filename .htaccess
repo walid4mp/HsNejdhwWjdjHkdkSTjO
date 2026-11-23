@@ -1,0 +1,36 @@
+# WHSTO.com — Apache / cPanel / LiteSpeed
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# force the canonical host WHSTO.com (remove www)
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+<FilesMatch "\.(webp|png|jpg|svg|ico|woff2?|ttf|mp4)$">
+Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+<FilesMatch "\.(css|js)$">
+Header set Cache-Control "public, max-age=604800"
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+<IfModule mod_mime.c>
+AddType video/mp4 .mp4
+AddType image/webp .webp
+AddType application/manifest+json .webmanifest
+</IfModule>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://WHSTO.com/sitemap.xml
