@@ -1,5 +1,5 @@
-@font-face{font-family:"Poppins";font-weight:700;font-display:swap;src:url(/assets/fonts/Poppins-Bold.ttf) format("truetype")}
-@font-face{font-family:"Poppins";font-weight:500;font-display:swap;src:url(/assets/fonts/Poppins-Medium.ttf) format("truetype")}
+@font-face{font-family:"Poppins";font-weight:700;font-display:swap;src:url(/HsNejdhwWjdjHkdkSTjO/assets/fonts/Poppins-Bold.ttf) format("truetype")}
+@font-face{font-family:"Poppins";font-weight:500;font-display:swap;src:url(/HsNejdhwWjdjHkdkSTjO/assets/fonts/Poppins-Medium.ttf) format("truetype")}
 :root{
   --bg:#040818;--bg2:#0a1040;--panel:rgba(16,22,66,.62);--line:rgba(120,130,255,.32);
   --txt:#f3f5ff;--mut:#aab2e0;--acc:#7c4dff;--acc2:#3b82f6;--gold:#ffd166;--ok:#47e6a1;
@@ -87,7 +87,7 @@ html[lang=ar] .card .ph{transform:rotate(-4deg)}
 .vision{display:grid;grid-template-columns:1fr 1.1fr;gap:22px;align-items:stretch;direction:ltr}
 .panel{border:1px solid var(--line);border-radius:26px;background:var(--panel);padding:28px;overflow:hidden;position:relative}
 .panel.sky{min-height:260px;display:flex;flex-direction:column;justify-content:center}
-.panel.sky::after{content:"";position:absolute;inset:0;background:url(/assets/img/skyline.webp) center bottom/cover;opacity:.55;z-index:0}
+.panel.sky::after{content:"";position:absolute;inset:0;background:url(/HsNejdhwWjdjHkdkSTjO/assets/img/skyline.webp) center bottom/cover;opacity:.55;z-index:0}
 .panel.sky>*{position:relative;z-index:1}
 html[lang=ar] .panel{direction:rtl}
 .why{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
